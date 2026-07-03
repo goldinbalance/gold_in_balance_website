@@ -1129,10 +1129,13 @@ body {
   .nav-burger { display: block; }
   .nav-inner { position: relative; padding: 10px 16px; }
 
-  /* Smaller logo on mobile — hide text, show icon only */
-  .logo img { height: 36px; }
-  .nav-title { display: none; }
-  .nav-cta { font-size: 10px; padding: 6px 14px; letter-spacing: 0.08em; }
+  /* Logo: smaller icon + keep text */
+  .logo img { height: 28px; }
+  .nav-title { font-size: 13px; letter-spacing: 0.03em; white-space: nowrap; }
+  /* Hide top-bar CTA — it will live inside the hamburger menu */
+  .nav-cta { display: none; }
+  /* Book a Session inside mobile menu */
+  .nav-cta-mobile { display: list-item !important; }
 
   .services-grid { grid-template-columns: 1fr; }
 
