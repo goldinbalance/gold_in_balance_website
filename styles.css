@@ -1117,7 +1117,7 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 68px;
+    top: 60px;
     left: 0;
     right: 0;
     background: rgba(91,162,185,0.98);
@@ -1127,15 +1127,24 @@ body {
     z-index: 99;
   }
   .nav-burger { display: block; }
-  .nav-inner { position: relative; }
+  .nav-inner { position: relative; padding: 10px 16px; }
+
+  /* Smaller logo on mobile — hide text, show icon only */
+  .logo img { height: 36px; }
+  .nav-title { display: none; }
+  .nav-cta { font-size: 10px; padding: 6px 14px; letter-spacing: 0.08em; }
 
   .services-grid { grid-template-columns: 1fr; }
 
   .testimonial-card { flex: 0 0 100%; }
   .testimonials-slider { padding: 0 52px; }
 
-  .stats-bar { gap: 28px; }
-  .stat-num { font-size: 1.8rem; }
+  /* Fix stats bar overflow */
+  .stats-bar { gap: 0; padding: 32px 16px; justify-content: space-around; }
+  .stat + .stat { border-left: 0.5px solid rgba(255,255,255,0.2); padding-left: 0; }
+  .stat { flex: 1; }
+  .stat-num { font-size: 1.6rem; }
+  .stat-label { font-size: 10px; letter-spacing: 0.08em; }
 
   .photo-strip { grid-template-columns: repeat(3, 1fr); }
 
@@ -1143,6 +1152,10 @@ body {
   .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
 
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Form mobile fixes */
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form-box { padding: 24px 20px !important; }
 }
 
 @media (max-width: 640px) {
