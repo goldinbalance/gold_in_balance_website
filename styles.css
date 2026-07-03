@@ -1100,6 +1100,7 @@ body {
   .contact-grid { grid-template-columns: 1fr; }
 
   .hero-photo { aspect-ratio: 3/2; max-width: 480px; }
+  .hero-photo img { object-position: center bottom; }
 
   .services-grid { grid-template-columns: repeat(2, 1fr); }
 
